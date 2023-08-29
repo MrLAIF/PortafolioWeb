@@ -1,11 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
   const showButton = document.getElementById("showElementButton");
-  const hiddenElement = document.getElementById("hiddenElement");
   const buttondiv = document.getElementById("buttondiv");
-  const hiddengif = document.querySelector(".centerGIF");
-  
+  const presentacionTitulo =document.getElementById("principal")
+  const presentacionDes =document.getElementById("principal-des")
+
+
   showButton.addEventListener("click", function() {
-    hiddenElement.style.display = "flex"; // Change to "block" to make it visible
-    buttondiv.style.display = "none"; // Change to "block" to make it visible
+    document.body.style.animation="backflash 0.5s forwards";
+    buttondiv.style.display="none";
+
+    presentacionTitulo.style.animation = "backflash-text 0.5s forwards, slideInLeft 0.5s ease-in-out 0.3s 1 normal both";
+    presentacionDes.style.animation = "backflash-text 0.5s forwards, slideInLeft 0.5s ease-in-out 0.8s 1 normal both";
+
   });
 });

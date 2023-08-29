@@ -10,11 +10,9 @@
     font-family: Nunito Sans;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
-    background-color: black;
-    height: 100vh;
     overflow: hidden;
 }
 
@@ -41,16 +39,101 @@ body{
     color: white;
 }
 
-.center-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-  
+
 
 .centerGIF{
     height: 100px;
 }
 
+@keyframes backflash{
+    0%{
+        background-color: black;
+      }
+    10%{
+        background-color: white;
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+
+.titulo{
+    color: white;
+    font-size: 100px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.descripcion{
+    color:white;
+    font-size: 20px;
+}
+
+.loadpage {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+@keyframes backflash-text{
+    0%{
+        color: white;
+      }
+    10%{
+        color: black;
+    }
+    100% {
+        color: white;
+    }
+}
+
+.backimgContainer{
+    display: flex;
+    height: 93vh;
+    width: 100%;
+}
+
+.titulo-presentacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 150px;
+}
+
+@keyframes slideInLeft{
+    0%{
+        transform: translateX(-120px);
+
+        opacity: 0;
+        filter: blur(5px);
+    }
+
+    100%{
+        transform: translateX(0);
+
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.pfpContainer{
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+}
+#pfp{
+    height: 200px;
+}
+
+#video-background {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
