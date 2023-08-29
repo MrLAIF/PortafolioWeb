@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&family=Roboto:wght@300&display=swap');
+
+@font-face {
+    font-family: 'pixelFont';
+    src: url('pixelFont.ttf') format('woff2'),
+         url('pixelFont.ttf') format('woff');
+  }
+
+*{
+    font-family: Nunito Sans;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.clickhere{
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.startButton{
+    font-family: 'pixelFont'; /* This is the name you'll use in your other CSS rules */
+    border: none;
+    font-size: 15px;
+    border: none;
+    color: white;
+    background-color: transparent;
+
+}
+
+.aaaa{
+    color: white;
+    display: none;
+}
+
+.centerthing{
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
