@@ -36,12 +36,6 @@ body {
 
 }
 
-.aaaa{
-    color: white;
-}
-
-
-
 .centerGIF{
     height: 100px;
 }
@@ -64,15 +58,19 @@ body {
     font-size: 100px;
     margin-top: 1px;
     margin-bottom: 1px;
+
+    animation: backflash-text 0.5s forwards, slideInLeft 0.5s ease-in-out 0.3s 1 normal both
 }
 
 .descripcion{
     color:white;
     font-size: 20px;
+
+    animation: backflash-text 0.5s forwards, slideInLeft 0.5s ease-in-out 0.8s 1 normal both;
 }
 
 .loadpage {
-    display: flex;
+    display: none;
     justify-content: center;
     flex-direction: column;
     width: 100%;
@@ -128,6 +126,7 @@ body {
 
 #pfp{
     height: 200px;
+    -webkit-user-drag: none;
 }
 
 .videoContainer{
@@ -138,11 +137,11 @@ body {
     height: 100%;
     
     background-size: cover;
-    background-attachment: fixed;
     z-index: -1;
     opacity: 0;
     background-image: url(./catJAMgif.gif);
-    /* animation: transparent 4s forwards; */
+
+    animation: transparent 2.5s forwards;
 }
 
 .videoContainer::before {
@@ -159,14 +158,16 @@ body {
 }
 
 .bar{
-    background-color: black;
+    background-color: white;
     height: 7vh;
     border-radius: 5px;
+
+    position: relative;
+
+    
 }
 
-
-
- @keyframes transparent {
+@keyframes transparent {
     0%, 90%{
         opacity: 0;
     }
@@ -174,3 +175,40 @@ body {
         opacity: 1;
     }
 } 
+
+.mediaButton{
+    font-size: 20px;
+    background-color:black;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.buttonCover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    
+    background-color: rgba(0,0,0,1);
+}
+
+@keyframes slideOut {
+    from{
+        left:0;
+        
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.buttonBar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 7vh;;
+}
