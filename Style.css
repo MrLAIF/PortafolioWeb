@@ -96,13 +96,13 @@ body {
     display: flex;
     height: 93vh;
     width: 100%;
+    justify-content: space-around;
 }
 
 .titulo-presentacion{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 150px;
 }
 
 @keyframes slideInLeft{
@@ -124,21 +124,11 @@ body {
 .pfpContainer{
     display: flex;
     align-items: center;
-    margin-left: 200px;
 }
+
 #pfp{
     height: 200px;
 }
-/* 
-#video-background {
-    position: fixed;
-
-    top: 0;
-    left: 0;
-    width: 100%;
-    object-fit: cover;
-    z-index: -1;
-} */
 
 .videoContainer{
     position: fixed;
@@ -150,6 +140,9 @@ body {
     background-size: cover;
     background-attachment: fixed;
     z-index: -1;
+    opacity: 0;
+    background-image: url(./catJAMgif.gif);
+    /* animation: transparent 4s forwards; */
 }
 
 .videoContainer::before {
@@ -162,7 +155,7 @@ body {
     
     z-index: -1;
 
-    animation: darktoclear 4s forwards;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .bar{
@@ -171,20 +164,13 @@ body {
     border-radius: 5px;
 }
 
-@keyframes darktoclear {
-    0%, 90%{
-        background-color: rgba(0, 0, 0, 1);
-    }
-    100%{
-        background-color: rgba(0, 0, 0, 0.4);
-    }
-}
 
-/* @keyframes transparent {
+
+ @keyframes transparent {
     0%, 90%{
         opacity: 0;
     }
     100%{
         opacity: 1;
     }
-} */
+} 
